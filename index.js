@@ -39,9 +39,7 @@ app.get('/api/v1/pets/owner', (req, res) => {
 // get pet by name
 app.get('/api/v1/pets/:name', (req, res) => {
     // get the name from the request
-    const nameId = req.params.name
-
-    const name = {name: nameId}
+    const name = req.params.name
 
     // find the pet in the pets array
     const pet = pets.find(pet => pet.name === name);
